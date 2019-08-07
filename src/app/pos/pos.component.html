@@ -1,0 +1,61 @@
+<div class="container receipt">
+  <br>
+  <div class="alert alert-primary hdn" role="alert" style="border:1px solid lightyellow;font:12px; border-left:3px solid blue;">
+    <i class="fa fa-info-circle fa-lg"></i> Type to search for product
+    <br>
+    <small>ex: computer</small>
+  </div>
+  <div id="header">
+    <h5>RHEENA SHEEN MERCHANDISING</h5>
+    <p>Buntun Tuguegarao City
+      <br> 09751457678 / 09176261806
+    </p>
+  </div>
+  <p>
+    Customer Name: {{customerName}}
+    <br> Date: 8/07/2019
+    <br>
+  </p>
+
+  <div class="hdn">
+    <input [(ngModel)]="selectedValue" [typeahead]="dataP" typeaheadOptionField="name" (typeaheadOnSelect)="onSelect($event)"
+      class="form-control" placeholder="Search" typeaheadSingleWords="true">
+  </div>
+
+  <br>
+  <button class="hdn" (click)="print()" disabled>Print</button>
+  <button class="hdn" (click)="exportToCSV()">Download</button>
+
+  <table id="tbl" class="tbl">
+    <tr>
+      <th>ITEM </th>
+      <th>PRICE </th>
+      <th>QTY </th>
+      <th>TOTAL</th>
+      <th class="hdn">delete</th>
+    </tr>
+    <tr *ngFor="let item of tblData; let i = index">
+      <td>{{item.name}}</td>
+      <td>{{item.p}}</td>
+      <td contenteditable="true" [textContent]="q" (input)="compute($event.target.textContent, i)" onfocus="document.execCommand('selectAll',false,null)"
+        onclick="document.execCommand('selectAll',false,null)" onKeypress="if(event.keyCode < 48 || event.keyCode > 57){return false;}">{{item.q}}
+      </td>
+      <td>{{item.t}}</td>
+      <td class="hdn" (click)="delete(i, item)">X</td>
+    </tr>
+  </table>
+  <br>
+  <h5>Grand Total: {{gt}}</h5>
+  <p>Thank you!
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> Signature
+  </p>
+</div>

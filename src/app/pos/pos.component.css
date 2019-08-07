@@ -1,0 +1,39 @@
+#header{
+
+    width:28%;
+    text-align: center;
+}
+  
+  table#tbl th{
+    text-align: center;
+  }
+  
+  table#tbl th:not(:nth-last-of-type(1)), table#tbl td:not(:nth-last-of-type(1)){
+    padding-right: 2px;
+  }
+  
+  table#tbl tr td:nth-last-of-type(2) {
+    text-align: right;
+  }
+
+@media print { 
+    .receipt { width: 58mm }
+    @page {
+        margin: 0;
+        
+    }
+
+    *{
+        margin-left:.8%;
+        size: 20sspt;
+        color: black;
+    }
+
+    .tbl{
+     margin-left:.5%;
+    }
+
+    .hdn{
+        display: none;
+    }
+ }
