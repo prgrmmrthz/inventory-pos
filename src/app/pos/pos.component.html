@@ -1,3 +1,4 @@
+<span>Data Source: {{dataSourceUrl}}</span>
 <div class="container receipt">
   <br>
   <div class="alert alert-primary hdn" role="alert" style="border:1px solid lightyellow;font:12px; border-left:3px solid blue;">
@@ -13,7 +14,7 @@
   </div>
   <p>
     Customer Name: {{customerName}}
-    <br> Date: 8/07/2019
+    <br> Date: {{dateX}}
     <br>
   </p>
 
@@ -25,6 +26,7 @@
   <br>
   <button class="hdn" (click)="print()" disabled>Print</button>
   <button class="hdn" (click)="exportToCSV()">Download</button>
+  <button class="hdn" (click)="changeDS()">Data Source</button>
 
   <table id="tbl" class="tbl">
     <tr>
@@ -47,6 +49,12 @@
   <br>
   <h5>Grand Total: {{gt}}</h5>
   <p>Thank you!
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>

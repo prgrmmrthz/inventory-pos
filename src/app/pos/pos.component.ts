@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, DoCheck } from '@angular/core';
 import { TypeaheadMatch } from 'ngx-bootstrap';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
@@ -19,13 +19,16 @@ export class PosComponent implements OnInit {
   q: number;
   gt: number = 0;
   customerName="";
+  dateX: string="";
+  dataSourceUrl: string="./assets/rsheenProducts.json";
+  
 
   constructor(
     private http: HttpClient
   ) { }
 
   async ngOnInit() {
-    this.getJSON().subscribe(d => {
+    this.getJSON(this.dataSourceUrl).subscribe(d => {
       this.dataP = d;
     });
     const {value: name} = await Swal.fire({
@@ -38,10 +41,30 @@ export class PosComponent implements OnInit {
     }else{
       Swal.fire("empty!");
     }
+
+    let a = new Date();
+    this.dateX=`${a.getMonth()+1}/${a.getDate()}/${a.getFullYear()}`;
   }
 
-  public getJSON(): Observable<any> {
-    return this.http.get("./assets/rsheenProducts.json");
+
+  public getJSON(url): Observable<any> {
+    return this.http.get(url);
+  }
+
+  async changeDS(){
+    const {value: ds} = await Swal.fire({
+      title: 'Data Source',
+      input: 'text',
+      inputPlaceholder: 'Enter Datasource url'
+    });
+    if(ds){
+      this.dataSourceUrl=ds;
+      this.getJSON(this.dataSourceUrl).subscribe(d => {
+        this.dataP = d;
+      });
+    }else{
+      Swal.fire("empty!");
+    }
   }
 
   onSelect(event: TypeaheadMatch): void {
@@ -184,7 +207,7 @@ export class PosComponent implements OnInit {
       csv.push('Buntun Tuguegarao City');
       csv.push('09751457678 / 09176261806');
       csv.push(`customer name , ${this.customerName}`);
-      csv.push('Date: 8/05/2019');
+      csv.push('Date: '+this.dateX);
       for (var i = 0; i < rows.length; i++) {
           var row = [], cols = rows[i].querySelectorAll("td, th");
           
@@ -208,7 +231,7 @@ export class PosComponent implements OnInit {
       csv.push('');
       csv.push('Signature');
       // Download CSV file
-      this.downloadCSV(csv.join("\n"), this.customerName+'.csv');
+      this.downloadCSV(csv.join("\n"), `${this.customerName}${this.dateX}.csv`);
       Swal.fire({
         title: 'Downloaded!',
         type: 'success',

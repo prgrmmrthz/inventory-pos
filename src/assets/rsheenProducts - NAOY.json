@@ -37,7 +37,7 @@
  },
  {
    "name": "cheeseflakes ",
-   "p": 205
+   "p": 200
  },
  {
    "name": "chef minibites ",
@@ -57,7 +57,7 @@
  },
  {
    "name": "chocoflakes ",
-   "p": 205
+   "p": 200
  },
  {
    "name": "chocojoe ",
@@ -85,11 +85,11 @@
  },
  {
    "name": "exsakto green ",
-   "p": 205
+   "p": 200
  },
  {
    "name": "exsakto red ",
-   "p": 205
+   "p": 200
  },
  {
    "name": "fruit jelly",
@@ -101,7 +101,7 @@
  },
  {
    "name": "halo halo",
-   "p": 205
+   "p": 200
  },
  {
    "name": "happy go lucky",
@@ -116,8 +116,8 @@
    "p": 245
  },
  {
-   "name": "hot hot ",
-   "p": 205
+   "name": "hot na hot ",
+   "p": 200
  },
  {
    "name": "ice cola",
@@ -189,15 +189,15 @@
  },
  {
    "name": "muncher coated ",
-   "p": 205
+   "p": 200
  },
  {
    "name": "muncher greenpeas",
-   "p": 205
+   "p": 200
  },
  {
    "name": "naks greenpeas",
-   "p": 172
+   "p": 175
  },
   {
    "name": "naks greenpeas T",
@@ -237,11 +237,11 @@
  },
  {
    "name": "siga blue ",
-   "p": 205
+   "p": 200
  },
  {
    "name": "siga red ",
-   "p": 205
+   "p": 200
  },
  {
    "name": "sizzling baka ",
@@ -273,7 +273,7 @@
  },
  {
    "name": "tattoos chips ",
-   "p": 205
+   "p": 200
  },
  {
    "name": "tattoos pizza ",
@@ -285,7 +285,7 @@
  },
  {
    "name": "vinegar bangus ",
-   "p": 172
+   "p": 170
  },
  {
    "name": "vital coin ",
@@ -392,7 +392,23 @@
    "p": 365
  },
   {
-   "name": "mobile legends",
-   "p": 172
+   "name": "good time",
+   "p": 245
+ },
+  {
+   "name": "isaw",
+   "p": 170
+ },
+  {
+   "name": "magic lobo",
+   "p": 170
+ },
+  {
+   "name": "caramel sweetcorn",
+   "p": 170
+ },
+  {
+   "name": "test naoy",
+   "p": 170
  }
 ]

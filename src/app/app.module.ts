@@ -10,12 +10,14 @@ import { LoginComponent } from './login/login.component';
 import { PosComponent } from './pos/pos.component';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MyEventListenerDirective } from './my-event-listener.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PosComponent
+    PosComponent,
+    MyEventListenerDirective
   ],
   imports: [
     BrowserModule,

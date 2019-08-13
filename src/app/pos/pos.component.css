@@ -9,7 +9,11 @@
   }
   
   table#tbl th:not(:nth-last-of-type(1)), table#tbl td:not(:nth-last-of-type(1)){
-    padding-right: 2px;
+    /* padding-right: 2px; */
+  }
+
+  table#tbl tr{
+      padding-bottom: 18px;
   }
   
   table#tbl tr td:nth-last-of-type(2) {
@@ -25,7 +29,7 @@
 
     *{
         margin-left:.8%;
-        size: 20sspt;
+        size: 24pt;
         color: black;
     }
 
