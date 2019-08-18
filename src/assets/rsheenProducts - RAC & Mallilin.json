@@ -333,7 +333,7 @@
  },
  {
    "name": "Honai Biscuits",
-   "p": 350
+   "p": 340
  },
  {
    "name": "Loaded",
@@ -410,25 +410,5 @@
   {
    "name": "jelly cake",
    "p": 175
- },
-  {
-   "name": "3d choco",
-   "p": 765
- },
-  {
-   "name": "3c fruit jelly",
-   "p": 350
- },
-  {
-   "name": "good time",
-   "p": 245
- },
-  {
-   "name": "cool n cozy",
-   "p": 48
- },
-  {
-   "name": "caramel sweetcorn",
-   "p": 170
  }
 ]

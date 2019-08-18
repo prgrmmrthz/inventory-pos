@@ -20,7 +20,7 @@ export class PosComponent implements OnInit {
   gt: number = 0;
   customerName="";
   dateX: string="";
-  dataSourceUrl: string="https://raw.githubusercontent.com/prgrmmrthz/inventory-pos/master/src/assets/rsheenProducts.json";
+  dataSourceUrl: string="./assets/rsheenProducts.json";
   
 
   constructor(
