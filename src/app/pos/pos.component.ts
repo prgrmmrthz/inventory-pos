@@ -21,7 +21,6 @@ export class PosComponent implements OnInit {
   customerName="";
   dateX: string="";
   dataSourceUrl: string="./assets/rsheenProducts.json";
-  
 
   constructor(
     private http: HttpClient
