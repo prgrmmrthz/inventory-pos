@@ -404,18 +404,14 @@
    "p": 175
  },
   {
-<<<<<<< HEAD
    "name": "dragon seed",
    "p": 175
  },
   {
-=======
->>>>>>> 2fae5d4787e29adc53812bb6a0f56402936ad923
    "name": "jelly cake",
    "p": 175
  },
-  {
-<<<<<<< HEAD
+ {
    "name": "3d choco",
    "p": 765
  },
@@ -434,9 +430,9 @@
   {
    "name": "caramel sweetcorn",
    "p": 170
-=======
+   },
+   {
    "name": "good time",
    "p": 245
->>>>>>> 2fae5d4787e29adc53812bb6a0f56402936ad923
- }
+	}
 ]
