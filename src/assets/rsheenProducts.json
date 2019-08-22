@@ -407,10 +407,6 @@
    "name": "dragon seed",
    "p": 175
  },
-  {
-   "name": "jelly cake",
-   "p": 175
- },
  {
    "name": "3d choco",
    "p": 765
@@ -434,5 +430,49 @@
    {
    "name": "good time",
    "p": 245
-	}
+	},
+	 {
+   "name": "magic bingo",
+   "p": 170
+   },
+	 {
+   "name": "v pusit 5g",
+   "p": 260
+   },
+	 {
+   "name": "v pusit 14g 2.0",
+   "p": 170
+   },
+	 {
+   "name": "v pusit 33g",
+   "p": 90
+   },
+	 {
+   "name": "ocean cracker",
+   "p": 170
+   },
+	 {
+   "name": "ok cracker",
+   "p": 170
+   },
+	 {
+   "name": "jelly cup",
+   "p": 48
+   },
+	 {
+   "name": "magic toys",
+   "p": 170
+   },
+	 {
+   "name": "avengers",
+   "p": 170
+   },
+	 {
+   "name": "cole",
+   "p": 52
+   },
+	 {
+   "name": "honai b 345",
+   "p": 345
+   }
 ]

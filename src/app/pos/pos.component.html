@@ -43,7 +43,7 @@
         onclick="document.execCommand('selectAll',false,null)" onKeypress="if(event.keyCode < 48 || event.keyCode > 57){return false;}">{{item.q}}
       </td>
       <td>{{item.t}}</td>
-      <td class="hdn" (click)="delete(i, item)">X</td>
+      <td class="hdn"><i class="fa fa-close" (click)="delete(i, item)" style="color:red"></i></td>
     </tr>
   </table>
   <br>

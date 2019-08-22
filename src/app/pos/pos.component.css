@@ -20,6 +20,10 @@
     text-align: right;
   }
 
+  .hdn{
+      align-content: flex-end;
+  }
+
 @media print { 
     .receipt { width: 58mm }
     @page {
