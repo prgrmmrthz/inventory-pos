@@ -10,7 +10,7 @@
   
   table#tbl th:not(:nth-last-of-type(1)), table#tbl td:not(:nth-last-of-type(1)){
     /* padding-right: 2px; */
-  }
+  } 
 
   table#tbl tr{
       padding-bottom: 18px;
