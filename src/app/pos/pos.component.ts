@@ -123,6 +123,27 @@ export class PosComponent implements OnInit {
     });
   }
 
+  async addItems(){
+    const { value: fv } = await Swal.fire({
+      title: 'New Item',
+      html:
+        'Item:  <input id="item" type="text" class="swal2-input">' +
+        'Price: <input id="price" type="number" class="swal2-input">',
+      focusConfirm: false,
+      preConfirm: () => {
+        return [
+          (<HTMLInputElement>document.getElementById('item')).value,
+          (<HTMLInputElement>document.getElementById('price')).value
+        ]
+      }
+    })
+    
+    if (fv) {
+      let a ={name: fv[0], p: fv[1]};
+      this.tblData.push(a);
+    }
+  }
+
   print() {
     /* this.prep();
     var columns = [
