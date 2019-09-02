@@ -3,6 +3,10 @@
     width:28%;
     text-align: center;
 }
+
+p.or{
+  font-size: 9.8px;
+}
   
   table#tbl th{
     text-align: center;

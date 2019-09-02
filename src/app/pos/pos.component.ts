@@ -10,8 +10,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./pos.component.css']
 })
 export class PosComponent implements OnInit {
-  dataP: Array<any> = [];
-  tblData: Array<any> = [];
+  dataP: Array<{name: string, p: number}>;
+  tblData: Array<any>;
   selectedOption: any;
   selectedValue: string;
   customSelected: string;
@@ -27,6 +27,7 @@ export class PosComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
+    this.tblData=[];
     this.getJSON(this.dataSourceUrl).subscribe(d => {
       this.dataP = d;
     });
@@ -42,6 +43,7 @@ export class PosComponent implements OnInit {
     }
 
     let a = new Date();
+    a.setDate(a.getDate() +1);
     this.dateX=`${a.getMonth()+1}/${a.getDate()}/${a.getFullYear()}`;
   }
 
@@ -72,9 +74,10 @@ export class PosComponent implements OnInit {
   }
 
   compute(q, i) {
+    console.debug(this.tblData);
     let a = this.tblData[i];
-    a['q'] = q;
-    a['t'] = a['p'] * q;
+    this.tblData[i]['q'] = q;
+    this.tblData[i]['t'] = this.tblData[i]['p'] * q;
     this.selectedValue = "";
     this.getTotal();
   }
